@@ -12,8 +12,6 @@
 			<NcFormBox>
 				<NcFormBoxSwitch v-model="cardDetailsInModal"
 					:label="t('deck', 'Use bigger card view')" />
-			</NcFormBox>
-			<NcFormBox>
 				<NcFormBoxSwitch v-model="hideNoDueOnOverview"
 					:label="t('deck', 'Hide no-due column on upcoming cards')" />
 			</NcFormBox>
