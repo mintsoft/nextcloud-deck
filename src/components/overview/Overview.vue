@@ -91,7 +91,7 @@ export default {
 	},
 	data() {
 		const dynamicList = [...COLUMN_PROPS_LIST];
-		if(this.$store.getters.config('hideNoDueOnOverview')) {
+		if(!this.$store.getters.config('hideNoDueOnOverview')) {
 			dynamicList.push({
 				title: 'No due',
 				filter: 'nodue',
