@@ -90,8 +90,8 @@ export default {
 		},
 	},
 	data() {
-		const dynamicList = [...COLUMN_PROPS_LIST];gothub
-		if(hideNoDueOnOverview) {
+		const dynamicList = [...COLUMN_PROPS_LIST];
+		if(this.$store.getters.config('hideNoDueOnOverview')) {
 			dynamicList.push({
 				title: 'No due',
 				filter: 'nodue',
