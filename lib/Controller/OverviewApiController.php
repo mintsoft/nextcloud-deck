@@ -27,7 +27,7 @@ class OverviewApiController extends OCSController {
 
 	#[NoAdminRequired]
 	public function upcomingCards(): DataResponse {
-		$hideNoDue = (bool)$this->request->getParam('hideNoDueOnOverview');
+		$hideNoDue = (bool)($this->request->getParam('hideNoDueOnOverview'));
 		return new DataResponse($this->dashboardService->findUpcomingCards($this->userId, $hideNoDue));
 	}
 }

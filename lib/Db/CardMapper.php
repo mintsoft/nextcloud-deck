@@ -350,7 +350,7 @@ class CardMapper extends QBMapper implements IPermissionMapper {
 			->andWhere($qb->expr()->eq('b.archived', $qb->createNamedParameter(false, IQueryBuilder::PARAM_BOOL)))
 			->andWhere($qb->expr()->eq('b.deleted_at', $qb->createNamedParameter(0, IQueryBuilder::PARAM_INT)));
 		if($filterNoDue) {
-			$db = $db->andWhere($qb->expr()->isNull('duedate'));
+			$qb = $qb->andWhere($qb->expr()->isNull('duedate'));
 		}
 		return $this->findEntities($qb);
 	}
