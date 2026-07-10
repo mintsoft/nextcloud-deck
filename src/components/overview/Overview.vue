@@ -124,7 +124,6 @@ export default {
 			},
 		},
 		...mapGetters(['assignedCardsDashboard']),
-		...mapState(useOverviewStore, ['assignedCards']),
 	},
 	watch: {
 		'$route.params.filter'() {
